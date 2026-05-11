@@ -3,308 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vikas Sharma | Cybersecurity Portfolio</title>
+  <title>Vikas Sharma | AI Cybersecurity Portfolio</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      background: #050816;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    a {
-      color: #00ffcc;
-      text-decoration: none;
-    }
-
-    header {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-      background: radial-gradient(circle at top, #003b46, #050816 55%);
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      color: #00ffcc;
-      margin-bottom: 15px;
-      text-shadow: 0 0 15px #00ffcc;
-    }
-
-    .hero h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-      color: #e6f7ff;
-    }
-
-    .hero p {
-      max-width: 750px;
-      margin: 0 auto 30px;
-      color: #cdd6f4;
-      font-size: 18px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      margin: 8px;
-      border: 1px solid #00ffcc;
-      border-radius: 30px;
-      color: #00ffcc;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #00ffcc;
-      color: #050816;
-      box-shadow: 0 0 18px #00ffcc;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(5, 8, 22, 0.95);
-      border-bottom: 1px solid #00ffcc33;
-      padding: 15px 20px;
-      text-align: center;
-    }
-
-    nav a {
-      margin: 0 15px;
-      font-weight: bold;
-      color: #ffffff;
-    }
-
-    nav a:hover {
-      color: #00ffcc;
-    }
-
-    section {
-      padding: 70px 10%;
-    }
-
-    .section-title {
-      font-size: 34px;
-      margin-bottom: 30px;
-      color: #00ffcc;
-      border-left: 5px solid #00ffcc;
-      padding-left: 15px;
-    }
-
-    .card {
-      background: #0b1026;
-      padding: 25px;
-      border-radius: 15px;
-      border: 1px solid #00ffcc33;
-      margin-bottom: 25px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.08);
-    }
-
-    .card h3 {
-      color: #00ffcc;
-      margin-bottom: 12px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 20px;
-    }
-
-    .skill {
-      background: #111936;
-      padding: 15px;
-      border-radius: 10px;
-      border: 1px solid #00ffcc33;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    ul {
-      padding-left: 20px;
-      color: #cdd6f4;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #00ffcc22;
-      border: 1px solid #00ffcc55;
-      padding: 6px 12px;
-      border-radius: 20px;
-      margin: 5px 5px 0 0;
-      color: #00ffcc;
-      font-size: 14px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background: #03050f;
-      border-top: 1px solid #00ffcc33;
-      color: #cdd6f4;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 36px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 8px;
-      }
-
-      section {
-        padding: 50px 6%;
-      }
-    }
+    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+    body{font-family:Inter,Arial,sans-serif;background:#020617;color:#e5faff;overflow-x:hidden;line-height:1.6}
+    a{text-decoration:none;color:inherit}.accent{color:#22f7dd}.pink{color:#ff3df2}.muted{color:#9fb7c7}
+    #matrix{position:fixed;inset:0;z-index:-2;background:#020617}.glow{position:fixed;width:420px;height:420px;border-radius:50%;filter:blur(100px);opacity:.35;z-index:-1}.g1{background:#00ffe1;top:-100px;left:-90px}.g2{background:#7c3aed;bottom:10%;right:-140px}.g3{background:#ff0080;top:45%;left:40%;opacity:.18}
+    nav{position:fixed;top:0;width:100%;z-index:99;display:flex;justify-content:space-between;align-items:center;padding:18px 8%;background:rgba(2,6,23,.75);backdrop-filter:blur(16px);border-bottom:1px solid rgba(34,247,221,.18)}
+    .logo{font-weight:900;letter-spacing:1px;color:#22f7dd;text-shadow:0 0 18px #22f7dd}.navlinks a{margin-left:22px;font-size:14px;color:#c9f6ff}.navlinks a:hover{color:#22f7dd}
+    header{min-height:100vh;display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;padding:120px 8% 70px}.badge{display:inline-block;padding:8px 14px;border:1px solid rgba(34,247,221,.5);border-radius:999px;background:rgba(34,247,221,.08);color:#22f7dd;font-size:14px;margin-bottom:18px}
+    h1{font-size:clamp(42px,7vw,82px);line-height:1.02;margin-bottom:18px;text-shadow:0 0 30px rgba(34,247,221,.35)}h2{font-size:clamp(24px,4vw,38px);margin-bottom:14px}.typing{font-size:22px;color:#ff3df2;min-height:34px;font-weight:700}.hero p{max-width:720px;color:#b8c9d6;font-size:18px;margin:22px 0}
+    .btn{display:inline-block;margin:10px 10px 0 0;padding:13px 22px;border-radius:14px;border:1px solid rgba(34,247,221,.65);color:#22f7dd;background:rgba(34,247,221,.08);box-shadow:0 0 22px rgba(34,247,221,.12);transition:.25s}.btn:hover{transform:translateY(-4px);background:#22f7dd;color:#020617;box-shadow:0 0 30px rgba(34,247,221,.55)}.btn.alt{border-color:rgba(255,61,242,.55);color:#ff3df2;background:rgba(255,61,242,.08)}.btn.alt:hover{background:#ff3df2;color:#020617;box-shadow:0 0 30px rgba(255,61,242,.55)}
+    .terminal{background:rgba(2,6,23,.8);border:1px solid rgba(34,247,221,.28);border-radius:24px;box-shadow:0 0 60px rgba(34,247,221,.15);overflow:hidden}.term-top{display:flex;gap:8px;padding:14px 18px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(34,247,221,.15)}.dot{width:12px;height:12px;border-radius:50%;background:#22f7dd}.dot:nth-child(2){background:#ff3df2}.dot:nth-child(3){background:#facc15}.term-body{padding:26px;font-family:Consolas,monospace;color:#dff}.line{margin:10px 0}.cmd{color:#22f7dd}.success{color:#4ade80}.warn{color:#facc15}
+    section{padding:85px 8%}.section-title{font-size:36px;margin-bottom:28px;color:#22f7dd;text-shadow:0 0 18px rgba(34,247,221,.35)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:22px}.card{background:linear-gradient(145deg,rgba(15,23,42,.85),rgba(2,6,23,.88));border:1px solid rgba(34,247,221,.18);border-radius:24px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.3);transition:.25s}.card:hover{transform:translateY(-8px);border-color:rgba(34,247,221,.55);box-shadow:0 0 38px rgba(34,247,221,.15)}.card h3{color:#eaffff;margin-bottom:12px}.card p,.card li{color:#b8c9d6}.card ul{padding-left:20px}.tag{display:inline-block;margin:10px 6px 0 0;padding:6px 11px;border-radius:999px;font-size:13px;color:#22f7dd;background:rgba(34,247,221,.09);border:1px solid rgba(34,247,221,.22)}
+    .skill{padding:18px;border-radius:18px;background:rgba(15,23,42,.8);border:1px solid rgba(255,255,255,.08)}.skill span{display:block;margin-bottom:10px;font-weight:700}.bar{height:9px;background:rgba(255,255,255,.08);border-radius:10px;overflow:hidden}.bar div{height:100%;border-radius:10px;background:linear-gradient(90deg,#22f7dd,#ff3df2)}
+    .timeline{border-left:2px solid rgba(34,247,221,.4);padding-left:24px}.timeline .card{position:relative}.timeline .card:before{content:"";position:absolute;left:-36px;top:28px;width:18px;height:18px;border-radius:50%;background:#22f7dd;box-shadow:0 0 18px #22f7dd}
+    footer{text-align:center;padding:35px;background:#01040e;border-top:1px solid rgba(34,247,221,.16);color:#9fb7c7}
+    @media(max-width:900px){header{grid-template-columns:1fr;padding-top:120px}.navlinks{display:none}.terminal{margin-top:20px}}
   </style>
 </head>
 <body>
+  <canvas id="matrix"></canvas><div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
+  <nav><div class="logo">VIKAS://AI-CYBER</div><div class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#ai">AI Security</a><a href="#contact">Contact</a></div></nav>
   <header>
     <div class="hero">
+      <span class="badge">⚡ Cybersecurity Student • AI Security Explorer</span>
       <h1>Vikas Sharma</h1>
-      <h2>Aspiring Cybersecurity Analyst | SOC | Digital Forensics</h2>
-      <p>
-        B.Tech Cybersecurity student passionate about security monitoring, SIEM log analysis,
-        digital forensics, web application security, cloud security, and threat detection.
-      </p>
-      <a href="https://github.com/VikasSharma-Cyber" target="_blank" class="btn">GitHub Profile</a>
-      <a href="#projects" class="btn">View Projects</a>
-      <a href="#contact" class="btn">Contact Me</a>
+      <div class="typing" id="typing"></div>
+      <p>B.Tech Cybersecurity student building practical skills in SOC operations, SIEM log analysis, digital forensics, web application security, cloud security, and AI-powered cyber defense.</p>
+      <a class="btn" href="https://github.com/VikasSharma-Cyber" target="_blank">Open GitHub</a>
+      <a class="btn alt" href="#projects">View Projects</a>
+      <a class="btn" href="#contact">Hire / Contact Me</a>
+    </div>
+    <div class="terminal">
+      <div class="term-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="term-body">
+        <div class="line"><span class="cmd">vikas@cyberlab:~$</span> whoami</div>
+        <div class="line success">Aspiring Cybersecurity Analyst</div>
+        <div class="line"><span class="cmd">vikas@cyberlab:~$</span> focus --areas</div>
+        <div class="line">SOC • Splunk • Digital Forensics • AI Security</div>
+        <div class="line"><span class="cmd">vikas@cyberlab:~$</span> mission</div>
+        <div class="line warn">Defend systems. Investigate threats. Secure the future with AI.</div>
+      </div>
     </div>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <section id="about"><h2 class="section-title">About Me</h2><div class="card"><p>I am Vikas Sharma, a B.Tech Cybersecurity student at Chitkara University, Himachal Pradesh. I enjoy hands-on cybersecurity work such as analyzing logs, detecting suspicious activity, performing basic vulnerability assessment, investigating digital evidence, and learning how AI can improve cyber defense.</p></div></section>
 
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <div class="card">
-      <p>
-        I am Vikas Sharma, a B.Tech Cybersecurity student at Chitkara University, Himachal Pradesh.
-        I am focused on building practical skills in SOC operations, Splunk SIEM, network security,
-        vulnerability assessment, digital forensics, and cloud security. My goal is to become a skilled
-        Cybersecurity Analyst and contribute to real-world cyber defense.
-      </p>
-    </div>
-  </section>
+  <section id="skills"><h2 class="section-title">Cyber Skills</h2><div class="grid">
+    <div class="skill"><span>Splunk SIEM / SPL</span><div class="bar"><div style="width:82%"></div></div></div>
+    <div class="skill"><span>Digital Forensics</span><div class="bar"><div style="width:78%"></div></div></div>
+    <div class="skill"><span>Burp Suite / OWASP</span><div class="bar"><div style="width:72%"></div></div></div>
+    <div class="skill"><span>Nmap / Wireshark</span><div class="bar"><div style="width:76%"></div></div></div>
+    <div class="skill"><span>Kali Linux</span><div class="bar"><div style="width:74%"></div></div></div>
+    <div class="skill"><span>AWS Security Basics</span><div class="bar"><div style="width:66%"></div></div></div>
+  </div></section>
 
-  <section id="skills">
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="grid">
-      <div class="skill">Splunk SIEM</div>
-      <div class="skill">SPL Queries</div>
-      <div class="skill">Wireshark</div>
-      <div class="skill">Nmap</div>
-      <div class="skill">Burp Suite</div>
-      <div class="skill">OWASP Top 10</div>
-      <div class="skill">FTK Imager</div>
-      <div class="skill">Autopsy</div>
-      <div class="skill">Kali Linux</div>
-      <div class="skill">Nessus</div>
-      <div class="skill">Hydra</div>
-      <div class="skill">AWS Basics</div>
-      <div class="skill">Networking</div>
-      <div class="skill">Python Basics</div>
-      <div class="skill">Git & GitHub</div>
-    </div>
-  </section>
+  <section id="projects"><h2 class="section-title">Featured Projects</h2><div class="grid">
+    <div class="card"><h3>SIEM Log Analysis & Threat Detection</h3><p>Analyzed security logs in Splunk, created SPL queries, detected failed login attempts, suspicious IP activity, and created dashboards for monitoring.</p><span class="tag">Splunk</span><span class="tag">SIEM</span><span class="tag">SPL</span><span class="tag">Threat Detection</span></div>
+    <div class="card"><h3>Digital Forensics Investigation</h3><p>Acquired and analyzed disk images using FTK Imager and Autopsy, recovered deleted files, and documented findings with chain of custody.</p><span class="tag">FTK Imager</span><span class="tag">Autopsy</span><span class="tag">Forensics</span></div>
+    <div class="card"><h3>Web Application Security Testing</h3><p>Performed OWASP Top 10 based testing, intercepted HTTP requests using Burp Suite, and identified SQL Injection and XSS vulnerabilities.</p><span class="tag">Burp Suite</span><span class="tag">OWASP</span><span class="tag">SQLi</span><span class="tag">XSS</span></div>
+  </div></section>
 
-  <section id="projects">
-    <h2 class="section-title">Projects</h2>
+  <section id="ai"><h2 class="section-title">AI + Cybersecurity Focus</h2><div class="grid">
+    <div class="card"><h3>AI Security</h3><p>Learning how attackers target AI systems through prompt injection, data poisoning, insecure plugins, and unsafe model outputs.</p></div>
+    <div class="card"><h3>Prompt Engineering</h3><p>Using structured prompts for cyber investigation, log analysis summaries, report drafting, and incident response documentation.</p></div>
+    <div class="card"><h3>LLM + RAG Security</h3><p>Exploring RAG concepts, LangChain, vector databases, and risks like sensitive data leakage and hallucinated security advice.</p></div>
+  </div></section>
 
-    <div class="card">
-      <h3>SIEM Log Analysis & Threat Detection using Splunk</h3>
-      <ul>
-        <li>Analyzed security logs using Splunk.</li>
-        <li>Created SPL queries to detect failed login attempts and suspicious IP activity.</li>
-        <li>Built dashboards and alerts for basic security monitoring.</li>
-      </ul>
-      <span class="tag">Splunk</span>
-      <span class="tag">SIEM</span>
-      <span class="tag">SPL</span>
-      <span class="tag">Threat Detection</span>
-    </div>
+  <section id="certifications"><h2 class="section-title">Certifications & Learning</h2><div class="timeline">
+    <div class="card"><h3>CCNA — In Progress</h3><p>Networking fundamentals, routing, switching, TCP/IP, OSI model, and subnetting.</p></div>
+    <div class="card"><h3>Splunk Fundamentals — Learning</h3><p>Search commands, dashboards, alerts, fields, indexes, and SOC use cases.</p></div>
+    <div class="card"><h3>TryHackMe Cyber Practice</h3><p>Hands-on rooms for SOC, Linux, web security, forensics, and AI security.</p></div>
+  </div></section>
 
-    <div class="card">
-      <h3>Digital Forensics Investigation</h3>
-      <ul>
-        <li>Acquired and analyzed disk images using FTK Imager.</li>
-        <li>Investigated file systems and recovered deleted files using Autopsy.</li>
-        <li>Documented forensic findings while maintaining chain of custody.</li>
-      </ul>
-      <span class="tag">FTK Imager</span>
-      <span class="tag">Autopsy</span>
-      <span class="tag">Forensics</span>
-      <span class="tag">Evidence Analysis</span>
-    </div>
+  <section id="achievement"><h2 class="section-title">Achievement</h2><div class="card"><h3>Top 10 Finalist — International Hackathon</h3><p>Selected as a Top 10 Finalist in an International Hackathon on the theme “Combating Hate Speech and Deep Fakes with AI”.</p></div></section>
 
-    <div class="card">
-      <h3>Web Application Security Testing</h3>
-      <ul>
-        <li>Performed security testing based on OWASP Top 10 vulnerabilities.</li>
-        <li>Intercepted and modified HTTP requests using Burp Suite.</li>
-        <li>Identified vulnerabilities like SQL Injection and Cross-Site Scripting.</li>
-      </ul>
-      <span class="tag">Burp Suite</span>
-      <span class="tag">OWASP Top 10</span>
-      <span class="tag">SQL Injection</span>
-      <span class="tag">XSS</span>
-    </div>
-  </section>
+  <section id="contact"><h2 class="section-title">Contact</h2><div class="card">
+    <p><strong>Email:</strong> vicky120905sharma@gmail.com</p>
+    <p><strong>GitHub:</strong> <a class="accent" href="https://github.com/VikasSharma-Cyber" target="_blank">github.com/VikasSharma-Cyber</a></p>
+    <p><strong>LinkedIn:</strong> <a class="accent" href="https://www.linkedin.com/in/vikas-sharma-30503a354" target="_blank">linkedin.com/in/vikas-sharma-30503a354</a></p>
+    <p><strong>Location:</strong> Himachal Pradesh, India</p>
+  </div></section>
+  <footer>© 2026 Vikas Sharma | AI Cybersecurity Portfolio</footer>
 
-  <section id="certifications">
-    <h2 class="section-title">Certifications & Learning</h2>
-    <div class="card">
-      <ul>
-        <li>CCNA - In Progress</li>
-        <li>Splunk Fundamentals - Learning</li>
-        <li>AWS Cloud Security Basics</li>
-        <li>Python Basics</li>
-        <li>TryHackMe Cybersecurity Practice</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="achievement">
-    <h2 class="section-title">Achievement</h2>
-    <div class="card">
-      <h3>Top 10 Finalist - International Hackathon</h3>
-      <p>
-        Selected as a Top 10 Finalist in an International Hackathon on the theme
-        <strong>Combating Hate Speech and Deep Fakes with AI</strong>.
-      </p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <div class="card">
-      <p><strong>Email:</strong> vicky120905sharma@gmail.com</p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/VikasSharma-Cyber" target="_blank">github.com/VikasSharma-Cyber</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vikas-sharma-30503a354" target="_blank">Linkdin.com</a></p>
-      <p><strong>Location:</strong> Himachal Pradesh, India</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Vikas Sharma | Cybersecurity Portfolio</p>
-  </footer>
+  <script>
+    const text = ["Cybersecurity Analyst", "AI Security Explorer", "Digital Forensics Investigator", "SOC & Splunk Learner"];
+    let i=0,j=0,del=false;const el=document.getElementById('typing');
+    function type(){const w=text[i];el.textContent=w.slice(0,j)+(j%2?'_':'');if(!del&&j<w.length)j++;else if(del&&j>0)j--;else{del=!del;if(!del)i=(i+1)%text.length}setTimeout(type,del?55:95)}type();
+    const c=document.getElementById('matrix'),ctx=c.getContext('2d');function size(){c.width=innerWidth;c.height=innerHeight}size();addEventListener('resize',size);
+    const letters='01AI CYBER SOC SIEM FORENSICS ';let font=15,cols=Math.floor(c.width/font),drops=Array(cols).fill(1);
+    function rain(){ctx.fillStyle='rgba(2,6,23,0.08)';ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle='#22f7dd';ctx.font=font+'px monospace';for(let x=0;x<drops.length;x++){let t=letters[Math.floor(Math.random()*letters.length)];ctx.fillText(t,x*font,drops[x]*font);if(drops[x]*font>c.height&&Math.random()>0.975)drops[x]=0;drops[x]++}requestAnimationFrame(rain)}rain();
+  </script>
 </body>
 </html>
