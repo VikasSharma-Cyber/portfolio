@@ -3,92 +3,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vikas Sharma | AI Cybersecurity Portfolio</title>
+  <title>Vikas Sharma | Cybersecurity Portfolio</title>
   <style>
     *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-    :root{--bg:#02030a;--cyan:#00f5ff;--green:#00ff9c;--pink:#ff2bd6;--purple:#8b5cf6;--text:#effcff;--muted:#9fb6c6;--glass:rgba(8,18,38,.62)}
-    body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
-    a{text-decoration:none;color:inherit}.cyan{color:var(--cyan)}.green{color:var(--green)}.pink{color:var(--pink)}.muted{color:var(--muted)}
-    #matrix,#particles{position:fixed;inset:0;z-index:-4}.noise{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E")}
-    .aurora{position:fixed;inset:-20%;z-index:-3;background:radial-gradient(circle at 15% 20%,rgba(0,245,255,.34),transparent 28%),radial-gradient(circle at 80% 15%,rgba(255,43,214,.25),transparent 25%),radial-gradient(circle at 50% 85%,rgba(0,255,156,.22),transparent 32%);filter:blur(50px);animation:float 9s infinite alternate ease-in-out}@keyframes float{to{transform:translate3d(35px,-25px,0) scale(1.08)}}
-    .grid-bg{position:fixed;inset:0;z-index:-2;background-image:linear-gradient(rgba(0,245,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,245,255,.07) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,transparent,black 18%,black 70%,transparent);perspective:900px;transform:skewY(-7deg) scale(1.2);opacity:.45}
-    nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:16px 7%;background:rgba(2,3,10,.58);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,245,255,.18)}
-    .logo{font-weight:1000;letter-spacing:1px;color:var(--cyan);text-shadow:0 0 18px var(--cyan)}.navlinks a{margin-left:22px;font-size:13px;color:#d9fbff}.navlinks a:hover{color:var(--green);text-shadow:0 0 14px var(--green)}
-    .hud{position:fixed;left:18px;top:110px;z-index:10;font-family:Consolas,monospace;font-size:12px;color:var(--green);opacity:.72}.hud div{margin:10px 0}.scan{position:fixed;inset:0;pointer-events:none;z-index:2;background:linear-gradient(to bottom,transparent,rgba(0,245,255,.08),transparent);height:120px;animation:scan 5s infinite linear}@keyframes scan{from{transform:translateY(-150px)}to{transform:translateY(110vh)}}
-    header{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:120px 7% 70px}.badge{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border:1px solid rgba(0,245,255,.55);border-radius:999px;background:rgba(0,245,255,.08);color:var(--cyan);font-size:13px;box-shadow:0 0 22px rgba(0,245,255,.14);margin-bottom:18px}
-    h1{font-size:clamp(46px,8vw,96px);line-height:.95;margin-bottom:18px;font-weight:1000;letter-spacing:-3px;background:linear-gradient(90deg,#fff,var(--cyan),var(--pink),var(--green));-webkit-background-clip:text;color:transparent;text-shadow:0 0 42px rgba(0,245,255,.22)}
-    .typing{font-size:clamp(20px,3vw,31px);min-height:44px;font-weight:900;color:var(--pink);text-shadow:0 0 18px rgba(255,43,214,.45)}.hero p{max-width:760px;color:#b7c9d7;font-size:18px;margin:22px 0}
-    .btn{display:inline-flex;align-items:center;gap:9px;margin:10px 10px 0 0;padding:14px 22px;border-radius:16px;border:1px solid rgba(0,245,255,.65);color:var(--cyan);background:linear-gradient(135deg,rgba(0,245,255,.12),rgba(139,92,246,.10));box-shadow:0 0 24px rgba(0,245,255,.13);transition:.25s;position:relative;overflow:hidden}.btn:before{content:"";position:absolute;inset:0;transform:translateX(-110%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transition:.5s}.btn:hover:before{transform:translateX(110%)}.btn:hover{transform:translateY(-5px) scale(1.02);background:var(--cyan);color:#02030a;box-shadow:0 0 36px rgba(0,245,255,.55)}.btn.alt{border-color:rgba(255,43,214,.65);color:var(--pink)}.btn.alt:hover{background:var(--pink);color:#02030a;box-shadow:0 0 36px rgba(255,43,214,.55)}
-    .orb-wrap{position:relative;min-height:520px;display:grid;place-items:center}.orb{width:min(430px,84vw);height:min(430px,84vw);border-radius:50%;position:relative;background:radial-gradient(circle at 35% 30%,#ffffff,rgba(0,245,255,.95) 10%,rgba(139,92,246,.45) 35%,rgba(255,43,214,.16) 55%,transparent 70%);box-shadow:0 0 80px rgba(0,245,255,.35),inset 0 0 80px rgba(255,255,255,.18);animation:pulse 3s infinite alternate}.orb:before,.orb:after{content:"";position:absolute;inset:-22px;border-radius:50%;border:1px solid rgba(0,245,255,.45);animation:spin 9s linear infinite}.orb:after{inset:45px;border-color:rgba(255,43,214,.5);animation-duration:5s;animation-direction:reverse}@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{to{filter:hue-rotate(50deg);transform:scale(1.035)}}
-    .ring{position:absolute;width:520px;height:520px;border:1px dashed rgba(0,255,156,.42);border-radius:50%;animation:spin 14s linear infinite}.chip{position:absolute;padding:10px 13px;border-radius:14px;background:rgba(5,12,28,.76);border:1px solid rgba(0,245,255,.3);color:#dff;font-family:Consolas,monospace;font-size:12px;box-shadow:0 0 20px rgba(0,245,255,.13)}.c1{top:40px;left:20px}.c2{right:10px;top:120px}.c3{bottom:70px;left:45px}.c4{bottom:40px;right:60px}
-    section{padding:88px 7%}.section-title{font-size:clamp(32px,5vw,52px);margin-bottom:30px;color:#fff;letter-spacing:-1px}.section-title span{color:var(--cyan);text-shadow:0 0 18px rgba(0,245,255,.55)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}.card{background:linear-gradient(145deg,rgba(10,20,42,.72),rgba(2,3,10,.76));border:1px solid rgba(0,245,255,.18);border-radius:28px;padding:26px;box-shadow:0 22px 65px rgba(0,0,0,.35);transition:.25s;position:relative;overflow:hidden}.card:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent,rgba(0,245,255,.09),transparent);transform:translateX(-120%);transition:.55s}.card:hover:before{transform:translateX(120%)}.card:hover{transform:translateY(-10px);border-color:rgba(0,245,255,.58);box-shadow:0 0 42px rgba(0,245,255,.16)}.card h3{font-size:22px;margin-bottom:12px;color:#f3feff}.card p,.card li{color:#b7c9d7}.card ul{padding-left:19px}.tag{display:inline-block;margin:11px 6px 0 0;padding:6px 11px;border-radius:999px;font-size:12px;color:var(--green);background:rgba(0,255,156,.08);border:1px solid rgba(0,255,156,.22)}
-    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px}.stat{text-align:center;padding:25px;border-radius:24px;background:rgba(0,245,255,.07);border:1px solid rgba(0,245,255,.18)}.stat b{font-size:38px;color:var(--cyan);text-shadow:0 0 18px rgba(0,245,255,.45)}.stat span{display:block;color:var(--muted);font-size:13px}.skill{padding:18px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}.skill span{display:flex;justify-content:space-between;margin-bottom:10px;font-weight:800}.bar{height:10px;background:rgba(255,255,255,.08);border-radius:10px;overflow:hidden}.bar div{height:100%;border-radius:10px;background:linear-gradient(90deg,var(--cyan),var(--pink),var(--green));box-shadow:0 0 16px rgba(0,245,255,.42)}
-    .lab{display:grid;grid-template-columns:1fr 1fr;gap:22px}.console{font-family:Consolas,monospace;font-size:14px;background:#020611;border:1px solid rgba(0,255,156,.25);border-radius:24px;padding:24px;color:#cffff1;min-height:280px}.console .cmd{color:var(--green)}.console .warn{color:#facc15}.console .bad{color:var(--pink)}
-    footer{text-align:center;padding:38px;background:#010207;border-top:1px solid rgba(0,245,255,.16);color:var(--muted)}
-    @media(max-width:980px){header{grid-template-columns:1fr}.navlinks{display:none}.hud{display:none}.lab{grid-template-columns:1fr}.orb-wrap{min-height:420px}.ring{width:390px;height:390px}.chip{font-size:10px}}
+    :root{--bg:#07111f;--card:#101b2e;--card2:#0d1728;--cyan:#26e6d1;--blue:#5aa9ff;--text:#eef8ff;--muted:#a9b8c7;--border:rgba(38,230,209,.22)}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at top left,rgba(38,230,209,.18),transparent 32%),radial-gradient(circle at bottom right,rgba(90,169,255,.14),transparent 34%)}
+    body:after{content:"";position:fixed;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;opacity:.4}
+    a{text-decoration:none;color:inherit}.accent{color:var(--cyan)}.muted{color:var(--muted)}
+
+    nav{position:sticky;top:0;z-index:99;display:flex;justify-content:space-between;align-items:center;padding:16px 8%;background:rgba(7,17,31,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-weight:800;color:var(--cyan);letter-spacing:.5px}.navlinks a{margin-left:22px;font-size:14px;color:#dcefff}.navlinks a:hover{color:var(--cyan)}
+
+    header{min-height:92vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:35px;padding:80px 8% 55px}
+    .badge{display:inline-block;padding:8px 14px;border-radius:999px;background:rgba(38,230,209,.1);border:1px solid var(--border);color:var(--cyan);font-size:14px;margin-bottom:18px}
+    h1{font-size:clamp(42px,7vw,76px);line-height:1.02;margin-bottom:14px;color:#fff}
+    .role{font-size:clamp(20px,3vw,28px);color:var(--cyan);font-weight:700;min-height:38px;margin-bottom:18px}
+    .hero p{max-width:720px;color:var(--muted);font-size:18px;margin-bottom:24px}
+    .btn{display:inline-block;padding:13px 21px;margin:8px 8px 0 0;border-radius:12px;border:1px solid var(--border);background:rgba(38,230,209,.08);color:var(--cyan);transition:.25s;font-weight:700}.btn:hover{transform:translateY(-3px);background:var(--cyan);color:#07111f;box-shadow:0 10px 28px rgba(38,230,209,.25)}.btn.secondary{background:rgba(90,169,255,.09);color:#aad3ff;border-color:rgba(90,169,255,.28)}.btn.secondary:hover{background:#5aa9ff;color:#07111f}
+
+    .profile-card{background:linear-gradient(145deg,rgba(16,27,46,.95),rgba(13,23,40,.95));border:1px solid var(--border);border-radius:26px;padding:28px;box-shadow:0 25px 60px rgba(0,0,0,.25)}
+    .terminal-top{display:flex;gap:8px;margin-bottom:20px}.dot{width:11px;height:11px;border-radius:50%;background:#ff5f57}.dot:nth-child(2){background:#ffbd2e}.dot:nth-child(3){background:#28c840}
+    .terminal{font-family:Consolas,monospace;font-size:14px;color:#dff}.terminal div{margin:10px 0}.cmd{color:var(--cyan)}.ok{color:#7df7b2}.warn{color:#ffd166}
+
+    section{padding:72px 8%}.section-title{font-size:34px;margin-bottom:28px;color:#fff}.section-title span{color:var(--cyan)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}.card{background:linear-gradient(145deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:24px;box-shadow:0 18px 40px rgba(0,0,0,.2);transition:.25s}.card:hover{transform:translateY(-6px);border-color:var(--border)}.card h3{color:#fff;margin-bottom:12px;font-size:21px}.card p,.card li{color:var(--muted)}.card ul{padding-left:20px}.tag{display:inline-block;margin:10px 6px 0 0;padding:6px 11px;border-radius:999px;background:rgba(38,230,209,.09);border:1px solid var(--border);color:var(--cyan);font-size:13px}
+
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px}.stat{background:rgba(16,27,46,.82);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:23px;text-align:center}.stat b{display:block;font-size:34px;color:var(--cyan)}.stat span{color:var(--muted);font-size:14px}
+    .skill{padding:18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}.skill span{display:flex;justify-content:space-between;margin-bottom:10px;font-weight:700}.bar{height:9px;border-radius:10px;background:rgba(255,255,255,.08);overflow:hidden}.bar div{height:100%;background:linear-gradient(90deg,var(--cyan),var(--blue));border-radius:10px}
+
+    .ai-box{display:grid;grid-template-columns:1fr 1fr;gap:22px}.mini-terminal{font-family:Consolas,monospace;background:#07101d;border:1px solid var(--border);border-radius:20px;padding:24px;color:#dff}.mini-terminal div{margin:9px 0}
+    footer{text-align:center;padding:32px 20px;background:#050b14;border-top:1px solid var(--border);color:var(--muted)}
+    @media(max-width:900px){nav{padding:14px 6%}.navlinks{display:none}header{grid-template-columns:1fr;padding:70px 6% 45px}section{padding:58px 6%}.ai-box{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-  <canvas id="matrix"></canvas><canvas id="particles"></canvas><div class="aurora"></div><div class="grid-bg"></div><div class="noise"></div><div class="scan"></div>
-  <div class="hud"><div>STATUS: ONLINE</div><div>MODE: AI-CYBER</div><div>THREAT LAB: ACTIVE</div><div>SOC FOCUS: ENABLED</div></div>
-  <nav><div class="logo">VIKAS://NEURAL-CYBER</div><div class="navlinks"><a href="#about">Identity</a><a href="#skills">Arsenal</a><a href="#projects">Missions</a><a href="#ai">AI Lab</a><a href="#contact">Connect</a></div></nav>
+  <nav>
+    <div class="logo">Vikas Sharma</div>
+    <div class="navlinks">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#ai">AI Security</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+
   <header>
     <div class="hero">
-      <span class="badge">◉ Future Cybersecurity Portfolio • AI Defense Mode</span>
+      <span class="badge">Cybersecurity Student • AI Security Learner</span>
       <h1>Vikas Sharma</h1>
-      <div class="typing" id="typing"></div>
-      <p>I build cyber defense skills through SIEM monitoring, threat detection, digital forensics, web security testing, cloud basics, and AI-security learning. My mission is simple: detect faster, investigate deeper, and secure smarter.</p>
-      <a class="btn" href="https://github.com/VikasSharma-Cyber" target="_blank">⚡ Launch GitHub</a>
-      <a class="btn alt" href="#projects">🛡 View Cyber Missions</a>
-      <a class="btn" href="#contact">🤖 Contact Operator</a>
+      <div class="role" id="typing"></div>
+      <p>B.Tech Cybersecurity student focused on SOC operations, Splunk SIEM, digital forensics, web application security, cloud security, and AI-powered cyber defense.</p>
+      <a class="btn" href="https://github.com/VikasSharma-Cyber" target="_blank">GitHub Profile</a>
+      <a class="btn secondary" href="#projects">View Projects</a>
+      <a class="btn" href="#contact">Contact Me</a>
     </div>
-    <div class="orb-wrap">
-      <div class="ring"></div><div class="orb"></div>
-      <div class="chip c1">AI_SECURITY=true</div><div class="chip c2">SIEM://Splunk</div><div class="chip c3">FORENSICS_SCAN</div><div class="chip c4">SOC_READY</div>
+
+    <div class="profile-card">
+      <div class="terminal-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="terminal">
+        <div><span class="cmd">vikas@cyberlab:~$</span> whoami</div>
+        <div class="ok">Aspiring Cybersecurity Analyst</div>
+        <div><span class="cmd">vikas@cyberlab:~$</span> skills --focus</div>
+        <div>Splunk • Forensics • Web Security • AI Security</div>
+        <div><span class="cmd">vikas@cyberlab:~$</span> mission</div>
+        <div class="warn">Detect threats. Investigate evidence. Secure systems.</div>
+      </div>
     </div>
   </header>
 
-  <section id="about"><h2 class="section-title"><span>01.</span> Digital Identity</h2><div class="card"><p>I am Vikas Sharma, a B.Tech Cybersecurity student at Chitkara University, Himachal Pradesh. I am focused on SOC operations, Splunk SIEM, network security, vulnerability assessment, digital forensics, cloud security, and AI-powered cyber defense. I like practical projects that show real skills, not only theory.</p></div></section>
+  <section id="about">
+    <h2 class="section-title"><span>01.</span> About Me</h2>
+    <div class="card">
+      <p>I am Vikas Sharma, a B.Tech Cybersecurity student at Chitkara University, Himachal Pradesh. I am building practical skills in security monitoring, SIEM log analysis, network security, vulnerability assessment, digital forensics, and AI security. My goal is to become a Cybersecurity Analyst and contribute to real-world cyber defense.</p>
+    </div>
+  </section>
 
-  <section><div class="stats"><div class="stat"><b>3+</b><span>Cyber Projects</span></div><div class="stat"><b>15+</b><span>Security Tools</span></div><div class="stat"><b>AI</b><span>Security Focus</span></div><div class="stat"><b>SOC</b><span>Career Target</span></div></div></section>
+  <section>
+    <div class="stats">
+      <div class="stat"><b>3+</b><span>Cyber Projects</span></div>
+      <div class="stat"><b>15+</b><span>Security Tools</span></div>
+      <div class="stat"><b>SOC</b><span>Career Target</span></div>
+      <div class="stat"><b>AI</b><span>Security Interest</span></div>
+    </div>
+  </section>
 
-  <section id="skills"><h2 class="section-title"><span>02.</span> Cyber Arsenal</h2><div class="grid">
-    <div class="skill"><span>Splunk SIEM / SPL <em>82%</em></span><div class="bar"><div style="width:82%"></div></div></div>
-    <div class="skill"><span>Digital Forensics <em>80%</em></span><div class="bar"><div style="width:80%"></div></div></div>
-    <div class="skill"><span>Burp Suite / OWASP <em>74%</em></span><div class="bar"><div style="width:74%"></div></div></div>
-    <div class="skill"><span>Nmap / Wireshark <em>78%</em></span><div class="bar"><div style="width:78%"></div></div></div>
-    <div class="skill"><span>Kali Linux <em>76%</em></span><div class="bar"><div style="width:76%"></div></div></div>
-    <div class="skill"><span>AI Security Basics <em>70%</em></span><div class="bar"><div style="width:70%"></div></div></div>
-  </div></section>
+  <section id="skills">
+    <h2 class="section-title"><span>02.</span> Technical Skills</h2>
+    <div class="grid">
+      <div class="skill"><span>Splunk SIEM / SPL <em>82%</em></span><div class="bar"><div style="width:82%"></div></div></div>
+      <div class="skill"><span>Digital Forensics <em>80%</em></span><div class="bar"><div style="width:80%"></div></div></div>
+      <div class="skill"><span>Burp Suite / OWASP <em>74%</em></span><div class="bar"><div style="width:74%"></div></div></div>
+      <div class="skill"><span>Nmap / Wireshark <em>78%</em></span><div class="bar"><div style="width:78%"></div></div></div>
+      <div class="skill"><span>Kali Linux <em>76%</em></span><div class="bar"><div style="width:76%"></div></div></div>
+      <div class="skill"><span>AWS Security Basics <em>66%</em></span><div class="bar"><div style="width:66%"></div></div></div>
+    </div>
+  </section>
 
-  <section id="projects"><h2 class="section-title"><span>03.</span> Cyber Missions</h2><div class="grid">
-    <div class="card"><h3>🛰 SIEM Log Analysis & Threat Detection</h3><p>Built a Splunk-based detection project for failed login attempts, suspicious IP activity, dashboards, and alerting workflow.</p><span class="tag">Splunk</span><span class="tag">SIEM</span><span class="tag">SPL</span><span class="tag">Threat Detection</span></div>
-    <div class="card"><h3>🧬 Digital Forensics Investigation</h3><p>Used FTK Imager and Autopsy to acquire evidence, analyze disk images, recover deleted files, and document forensic findings.</p><span class="tag">FTK Imager</span><span class="tag">Autopsy</span><span class="tag">Evidence</span></div>
-    <div class="card"><h3>🌐 Web Application Security Testing</h3><p>Performed OWASP Top 10 testing with Burp Suite, intercepted HTTP traffic, and identified SQL Injection and XSS issues.</p><span class="tag">Burp Suite</span><span class="tag">OWASP</span><span class="tag">SQLi</span><span class="tag">XSS</span></div>
-  </div></section>
+  <section id="projects">
+    <h2 class="section-title"><span>03.</span> Projects</h2>
+    <div class="grid">
+      <div class="card"><h3>SIEM Log Analysis & Threat Detection</h3><p>Analyzed security logs using Splunk, created SPL queries, detected failed login attempts and suspicious IP activity, and built basic dashboards.</p><span class="tag">Splunk</span><span class="tag">SIEM</span><span class="tag">SPL</span><span class="tag">Threat Detection</span></div>
+      <div class="card"><h3>Digital Forensics Investigation</h3><p>Used FTK Imager and Autopsy to acquire evidence, analyze disk images, recover deleted files, and document forensic findings.</p><span class="tag">FTK Imager</span><span class="tag">Autopsy</span><span class="tag">Forensics</span></div>
+      <div class="card"><h3>Web Application Security Testing</h3><p>Performed OWASP Top 10 based testing, intercepted HTTP requests using Burp Suite, and identified SQL Injection and XSS issues.</p><span class="tag">Burp Suite</span><span class="tag">OWASP</span><span class="tag">SQLi</span><span class="tag">XSS</span></div>
+    </div>
+  </section>
 
-  <section id="ai"><h2 class="section-title"><span>04.</span> AI Cyber Lab</h2><div class="lab">
-    <div class="console"><div><span class="cmd">ai-cyber@lab:~$</span> scan_focus</div><br><div>▶ Prompt Injection Defense</div><div>▶ LLM Security Basics</div><div>▶ RAG Security Concepts</div><div>▶ AI-Assisted Log Analysis</div><div>▶ Cyber Report Automation</div><br><div class="warn">status: learning_in_progress</div></div>
-    <div class="card"><h3>Why AI + Cyber?</h3><p>AI is becoming part of SOC, threat intelligence, phishing detection, malware analysis, and security automation. I am learning AI security topics like prompt injection, unsafe outputs, data leakage, and secure use of LLMs in cyber workflows.</p><span class="tag">AI Security</span><span class="tag">Prompt Engineering</span><span class="tag">LLM Security</span><span class="tag">RAG</span></div>
-  </div></section>
+  <section id="ai">
+    <h2 class="section-title"><span>04.</span> AI + Cybersecurity</h2>
+    <div class="ai-box">
+      <div class="mini-terminal">
+        <div><span class="cmd">ai-cyber@lab:~$</span> learning_path</div>
+        <div>• Prompt Injection Basics</div>
+        <div>• LLM Security Concepts</div>
+        <div>• AI-Assisted Log Analysis</div>
+        <div>• Cyber Report Automation</div>
+      </div>
+      <div class="card">
+        <h3>Why AI Security?</h3>
+        <p>AI is becoming important in SOC, threat intelligence, phishing detection, malware analysis, and security automation. I am learning how AI systems can be attacked and how they can be used safely in cybersecurity workflows.</p>
+        <span class="tag">AI Security</span><span class="tag">Prompt Engineering</span><span class="tag">LLM Security</span><span class="tag">RAG Basics</span>
+      </div>
+    </div>
+  </section>
 
-  <section id="certifications"><h2 class="section-title"><span>05.</span> Learning Path</h2><div class="grid"><div class="card"><h3>CCNA — In Progress</h3><p>Networking, TCP/IP, OSI model, routing, switching, and subnetting.</p></div><div class="card"><h3>Splunk Fundamentals — Learning</h3><p>Search commands, dashboards, fields, indexes, alerts, and SOC use cases.</p></div><div class="card"><h3>TryHackMe Practice</h3><p>Hands-on practice in SOC, Linux, web security, digital forensics, and AI security.</p></div></div></section>
+  <section id="certifications">
+    <h2 class="section-title"><span>05.</span> Certifications & Learning</h2>
+    <div class="grid">
+      <div class="card"><h3>CCNA — In Progress</h3><p>Networking fundamentals, TCP/IP, OSI model, routing, switching, and subnetting.</p></div>
+      <div class="card"><h3>Splunk Fundamentals — Learning</h3><p>Search commands, fields, indexes, dashboards, alerts, and SOC use cases.</p></div>
+      <div class="card"><h3>TryHackMe Practice</h3><p>Hands-on practice in SOC, Linux, web security, forensics, and AI security.</p></div>
+    </div>
+  </section>
 
-  <section id="achievement"><h2 class="section-title"><span>06.</span> Achievement</h2><div class="card"><h3>🏆 Top 10 Finalist — International Hackathon</h3><p>Selected as a Top 10 Finalist in an International Hackathon on “Combating Hate Speech and Deep Fakes with AI”.</p></div></section>
+  <section id="achievement">
+    <h2 class="section-title"><span>06.</span> Achievement</h2>
+    <div class="card"><h3>Top 10 Finalist — International Hackathon</h3><p>Selected as a Top 10 Finalist in an International Hackathon on the theme “Combating Hate Speech and Deep Fakes with AI”.</p></div>
+  </section>
 
-  <section id="contact"><h2 class="section-title"><span>07.</span> Contact Operator</h2><div class="card">
-    <p><strong>Email:</strong> vicky120905sharma@gmail.com</p>
-    <p><strong>GitHub:</strong> <a class="cyan" href="https://github.com/VikasSharma-Cyber" target="_blank">github.com/VikasSharma-Cyber</a></p>
-    <p><strong>LinkedIn:</strong> <a class="cyan" href="https://www.linkedin.com/in/vikas-sharma-30503a354" target="_blank">linkedin.com/in/vikas-sharma-30503a354</a></p>
-    <p><strong>Location:</strong> Himachal Pradesh, India</p>
-  </div></section>
-  <footer>© 2026 Vikas Sharma | Neural AI Cybersecurity Portfolio</footer>
+  <section id="contact">
+    <h2 class="section-title"><span>07.</span> Contact</h2>
+    <div class="card">
+      <p><strong>Email:</strong> vicky120905sharma@gmail.com</p>
+      <p><strong>GitHub:</strong> <a class="accent" href="https://github.com/VikasSharma-Cyber" target="_blank">github.com/VikasSharma-Cyber</a></p>
+      <p><strong>LinkedIn:</strong> <a class="accent" href="https://www.linkedin.com/in/vikas-sharma-30503a354" target="_blank">linkedin.com/in/vikas-sharma-30503a354</a></p>
+      <p><strong>Location:</strong> Himachal Pradesh, India</p>
+    </div>
+  </section>
+
+  <footer>© 2026 Vikas Sharma | Cybersecurity Portfolio</footer>
 
   <script>
-    const roles=["AI Cybersecurity Student","SOC Analyst in Training","Digital Forensics Investigator","Splunk SIEM Learner","Future Cyber Defense Engineer"];let i=0,j=0,del=false;const typeEl=document.getElementById('typing');function type(){const w=roles[i];typeEl.textContent=w.slice(0,j)+(j%2?'_':'');if(!del&&j<w.length)j++;else if(del&&j>0)j--;else{del=!del;if(!del)i=(i+1)%roles.length}setTimeout(type,del?45:85)}type();
-    const m=document.getElementById('matrix'),mx=m.getContext('2d');function resize(){m.width=innerWidth;m.height=innerHeight;p.width=innerWidth;p.height=innerHeight}const p=document.getElementById('particles'),px=p.getContext('2d');resize();addEventListener('resize',resize);
-    let letters='01 AI CYBER SOC SIEM FORENSICS LLM RAG ';let font=16,drops=Array(Math.floor(innerWidth/font)).fill(1);function matrix(){mx.fillStyle='rgba(2,3,10,.09)';mx.fillRect(0,0,m.width,m.height);mx.fillStyle='#00ff9c';mx.font=font+'px monospace';for(let x=0;x<drops.length;x++){let t=letters[Math.floor(Math.random()*letters.length)];mx.fillText(t,x*font,drops[x]*font);if(drops[x]*font>m.height&&Math.random()>.975)drops[x]=0;drops[x]++}requestAnimationFrame(matrix)}matrix();
-    let nodes=Array.from({length:70},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.7,vy:(Math.random()-.5)*.7}));function particles(){px.clearRect(0,0,p.width,p.height);for(let a of nodes){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>p.width)a.vx*=-1;if(a.y<0||a.y>p.height)a.vy*=-1;px.beginPath();px.arc(a.x,a.y,2,0,Math.PI*2);px.fillStyle='rgba(0,245,255,.65)';px.fill()}for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){let dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,d=Math.hypot(dx,dy);if(d<130){px.strokeStyle='rgba(0,245,255,'+(1-d/130)*.25+')';px.lineWidth=1;px.beginPath();px.moveTo(nodes[i].x,nodes[i].y);px.lineTo(nodes[j].x,nodes[j].y);px.stroke()}}requestAnimationFrame(particles)}particles();
+    const roles=["Aspiring Cybersecurity Analyst","SOC & Splunk Learner","Digital Forensics Enthusiast","AI Security Learner"];
+    let i=0,j=0,del=false;const el=document.getElementById('typing');
+    function type(){const word=roles[i];el.textContent=word.slice(0,j)+(j%2?'_':'');if(!del&&j<word.length)j++;else if(del&&j>0)j--;else{del=!del;if(!del)i=(i+1)%roles.length}setTimeout(type,del?55:90)}
+    type();
   </script>
 </body>
 </html>
